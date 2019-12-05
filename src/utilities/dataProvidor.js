@@ -1,6 +1,6 @@
 import { isLocationExists } from "./localstorgeHandling";
 
-const apiKey = "5RRmgw3m0GjY7TpsXiL8X9emV63dV3ep";
+const apiKey = "pafSLrxAaB7FuHeau3pJ6Cvx6DAojRkp";
 const currentConditionUrl =
   "http://dataservice.accuweather.com/currentconditions/v1";
 const dailyForecastsUrl =
