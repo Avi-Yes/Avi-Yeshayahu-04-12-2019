@@ -1,13 +1,27 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.main-content {
+  background-image: url(./weather-icons/sky-and-clouds-1-1388641.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+.forecast-items {
+}
+.search-input {
+  width: 50% !important;
+  margin: auto !important;
+}
+
+.weather-icon {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.speartion {
+  height: 180px;
+}
+
+.fav-icon:hover {
+  cursor: pointer;
 }
