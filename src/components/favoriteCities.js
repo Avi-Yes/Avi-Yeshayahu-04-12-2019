@@ -7,14 +7,15 @@ import { getFavLocations } from "../utilities/localstorgeHandling";
 class FavoriteCities extends Component {
   state = {};
   render() {
-    const favLocations = getFavLocations(); //getLocationLocally
-    //const lastCol = favLocations.length % 2
-    //const rows = Math.ceil(favLocations.lengthfavLocations.length / 4);
+    const favLocations = getFavLocations();
 
     return (
       <React.Fragment>
         <Navbar />
         <div className="container">
+          <h2 className="text-center font-weight-bold mt-3">
+            Favorites Locations
+          </h2>
           {favLocations.map(location => {
             return (
               <div key={location.id} className="row mt-3">
