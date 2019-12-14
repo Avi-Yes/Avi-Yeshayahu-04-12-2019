@@ -12,6 +12,7 @@ const days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
 export const getCurrentCondition = (locationId, locationName) => {
   return fetch(`${currentConditionUrl}/${locationId}?apikey=${apiKey}`)
+    .then(handleErrors)
     .then(response => response.json())
     .then(response => {
       return {
@@ -30,6 +31,7 @@ export const getDailyForecasts = locationId => {
   return fetch(
     `${dailyForecastsUrl}/${locationId}?apikey=${apiKey}&metric=true`
   )
+    .then(handleErrors)
     .then(response => response.json())
     .then(response =>
       response.DailyForecasts.map((day, index) => {
@@ -45,6 +47,7 @@ export const getDailyForecasts = locationId => {
 
 export const getQueryInfo = query => {
   return fetch(`${autocompleteSearchUrl}?apikey=${apiKey}&q=${query}`)
+    .then(handleErrors)
     .then(response => response.json())
     .then(response =>
       response.map(city => {
@@ -56,3 +59,10 @@ export const getQueryInfo = query => {
     )
     .catch(err => console.log(err));
 };
+
+function handleErrors(response) {
+  if (!response.ok) {
+    throw Error(response.statusText);
+  }
+  return response;
+}

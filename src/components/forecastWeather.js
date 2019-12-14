@@ -3,7 +3,6 @@ import React, { Component } from "react";
 class ForecastWeather extends Component {
   render() {
     const { weatherIcon, day, temperature } = this.props;
-    console.log(this.props);
     if (!weatherIcon || !day || !temperature) {
       return (
         <div className="d-flex justify-content-center">

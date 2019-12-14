@@ -2,7 +2,6 @@ export const saveLocally = newLocation => {
   let favLocation = getFavLocations();
   const isExists = isLocationExists(newLocation.id);
   if (!isExists) {
-    console.log("isExists", isExists);
     favLocation.push(newLocation);
     localStorage.setItem("favLocation", JSON.stringify(favLocation));
   }

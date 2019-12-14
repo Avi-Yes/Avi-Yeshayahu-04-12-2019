@@ -22,6 +22,7 @@
   height: 180px;
 }
 
-.fav-icon:hover {
+.fav-icon:hover,
+.refresh-icon:hover {
   cursor: pointer;
 }

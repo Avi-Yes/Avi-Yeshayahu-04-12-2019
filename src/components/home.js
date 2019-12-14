@@ -2,8 +2,8 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 
 import WeatherDetailes from "./weatherDetails";
-import Navbar from "./navbar";
-import SearchInput from "./inputSearch/inputSearch";
+import Navigation from "./navigation";
+import SearchInput from "./searchInput/searchInput";
 import {
   getLocationActionCreator,
   getDailyForecastActionCreator
@@ -20,7 +20,7 @@ class Home extends Component {
   render() {
     return (
       <React.Fragment>
-        <Navbar />
+        <Navigation />
         <SearchInput />
         <WeatherDetailes />
       </React.Fragment>
@@ -41,7 +41,6 @@ const mapDispatchToProps = dispatch => {
       dispatch(getLocationActionCreator(locationId, locationName)),
     getDailyForecast: loacationId =>
       dispatch(getDailyForecastActionCreator(loacationId))
-    // setName: name => dispatch(setNameCreator(name))
   };
 };
 export default connect(mapStateToProps, mapDispatchToProps)(Home);

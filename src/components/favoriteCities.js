@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import Navbar from "./navbar";
+import Navbar from "./navigation";
 import CurrentWeather from "./currentWeather";
 import { getFavLocations } from "../utilities/localstorgeHandling";
 
@@ -16,6 +16,7 @@ class FavoriteCities extends Component {
           <h2 className="text-center font-weight-bold mt-3">
             Favorites Locations
           </h2>
+
           {favLocations.map(location => {
             return (
               <div key={location.id} className="row mt-3">

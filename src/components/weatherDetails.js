@@ -9,7 +9,6 @@ import {
 import {
   saveLocally,
   removeLocally,
-  isLocationExists
 } from "../utilities/localstorgeHandling";
 
 class WeatherDetailes extends Component {
@@ -49,9 +48,9 @@ class WeatherDetailes extends Component {
             <span onClick={this.hadelLikeBtnCliked} className="fav-icon">
               <i
                 className={
-                  this.props.currentLocation.liked ||
-                  isLocationExists(this.props.currentLocation)
-                    ? "fa fa-heart fa-3x"
+                  this.props.currentLocation.liked
+                    ? 
+                      "fa fa-heart fa-3x"
                     : "fa fa-heart-o fa-3x"
                 }
                 aria-hidden="true"
@@ -87,14 +86,11 @@ const mapStateToProps = state => {
   return {
     currentLocation: state.currentLocation,
     dailyForecast: state.dailyForecast
-    //liked: state.liked,
-    // name: state.name
   };
 };
 
 const mapDispatchToProps = dispatch => {
   return {
-    // getLocation: (locationId, locationName) => dispatch(getLocationActionCreator(locationId, locationName)),
     getDailyForecast: loacationId =>
       dispatch(getDailyForecastActionCreator(loacationId)),
     toggelLiked: option => {
