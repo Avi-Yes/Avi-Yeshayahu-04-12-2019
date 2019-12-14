@@ -2,11 +2,11 @@ import { isLocationExists } from "./localstorgeHandling";
 
 const apiKey = "pafSLrxAaB7FuHeau3pJ6Cvx6DAojRkp";
 const currentConditionUrl =
-  "http://dataservice.accuweather.com/currentconditions/v1";
+  "https://dataservice.accuweather.com/currentconditions/v1";
 const dailyForecastsUrl =
-  "http://dataservice.accuweather.com/forecasts/v1/daily/5day";
+  "https://dataservice.accuweather.com/forecasts/v1/daily/5day";
 const autocompleteSearchUrl =
-  "http://dataservice.accuweather.com/locations/v1/cities/autocomplete";
+  "https://dataservice.accuweather.com/locations/v1/cities/autocomplete";
 
 const days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
